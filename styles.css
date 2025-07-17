@@ -1,0 +1,122 @@
+/* רקע כללי */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url('/public_media/images/backfam.jpeg') no-repeat center center fixed;
+    background-size: 50%; /* שינוי: התמונה תהיה 50% מרוחב וגובה אזור התצוגה */
+    background-repeat: no-repeat; /* ודא שלא חוזרת על עצמה */
+    color: #fff;
+    text-align: center;
+}
+
+/* תיבת תוכן שקופה */
+.content-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* כותרות */
+h1, h2, h3 {
+    color: #ffcc00;
+}
+
+/* תמונה עגולה */
+.circular-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* קישורים */
+a {
+    color: #66ccff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* כפתור שיתוף */
+.share-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+    background-color: #1ebe5d;
+}
+
+/* תפריט ראשי */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* אייקון תפריט נייד */
+.menu-toggle {
+    font-size: 1.8em;
+    cursor: pointer;
+    display: none;
+}
+
+/* ניווט רגיל */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* רספונסיביות לניידים */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content-box {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
